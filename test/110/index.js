@@ -9,10 +9,6 @@ var isBalanced = function(root) {
 function testDepth (root) {
   const left =  (root.left)  ? testDepth(root.left)  : {bal: true, left: 0, right: 0}
   const right = (root.right) ? testDepth(root.right) : {bal: true, left: 0, right: 0}
-  // console.log('---------------')
-  // console.log(root.val)
-  // console.log(left)
-  // console.log(right)
   const leftCount = Math.max(left.left, left.right)
   const rightCount = Math.max(right.left, right.right)
   return {

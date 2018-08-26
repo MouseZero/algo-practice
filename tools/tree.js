@@ -3,9 +3,11 @@ function treeCreator (arrayOfValues) {
     const firstChild = i + i + 1
     const left = arrayOfValues[firstChild] || null
     const right = arrayOfValues[firstChild+1] || null
-    arrayOfValues[i] = {
-      val: arrayOfValues[i],
-      left, right
+    if (!(arrayOfValues[i] === null)) {
+      arrayOfValues[i] = {
+        val: arrayOfValues[i],
+        left, right
+      }
     }
   }
   return arrayOfValues[0]
