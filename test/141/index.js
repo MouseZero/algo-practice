@@ -6,9 +6,7 @@ function ListNode(val) {
 }
 
 var hasCycle = function(head) {
-  console.log('got here')
   if (!head || !head.next) return false
-  console.log('didn\'tget here')
   let slow = head
   let fast = head.next
   while (fast) {
