@@ -15,7 +15,18 @@ function linkListFromArray(array) {
   return node
 }
 
+function listToArray(head) {
+  let node = head
+  const array = []
+  while(node) {
+    array.push(node.val)
+    node = node.next
+  }
+  return array
+}
+
 module.exports = {
   linkListFromArray,
-  ListNode
+  ListNode,
+  listToArray
 }
